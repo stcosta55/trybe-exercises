@@ -1,0 +1,33 @@
+ol li{
+    background-color: yellow;
+}
+
+ol li:nth-last-of-type(odd){
+    text-transform: uppercase;
+}
+
+ol li:nth-last-of-type(even){
+    color: green;
+}
+
+.fonte-vermelha {
+    color: red;
+}
+
+.italico{
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+li{
+    font-size: 20px;
+}
+
+h1, h3{
+    color: red;
+}
+
+h1, h3 em{
+    font-weight: bold;
+}
+
