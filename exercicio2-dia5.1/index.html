@@ -20,7 +20,7 @@
       }
 
       .main-content .center-content {
-        background-color: red;
+        background-color: rgb(158, 48, 48);
         width: 50%;
         margin: 0 auto;
       }
@@ -57,7 +57,13 @@ function alteraDescricao(future){
 
 alteraDescricao(futuremsg)
 
-//  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+//  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb 76,164,109).
+
+function changeColor(){
+    console.log(document.getElementsByTagName("main")[0].style.backgroundColor = "green");
+}
+changeColor(76,164,109)
+
 //  Crie uma função que mude a cor do quadrado vermelho para branco.
 //  Crie uma função que corrija o texto da tag <h1>.
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
