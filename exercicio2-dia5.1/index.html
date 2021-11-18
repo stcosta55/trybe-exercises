@@ -49,29 +49,54 @@
 //         - document.getElementsByTagName()
 //  Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
 
-let futuremsg = "me vejo trabalhando em uma empresa internacional, com desafios diários e uma equipe multicultural";
+// let futuremsg = "me vejo trabalhando em uma empresa internacional, com desafios diários e uma equipe multicultural";
 
-function alteraDescricao(future){
-    (document.getElementsByTagName("p")[1].innerText = future);
-}
+// function alteraDescricao(future){
+//     (document.getElementsByTagName("p")[1].innerText = future);
+// }
 
-alteraDescricao(futuremsg)
+// alteraDescricao(futuremsg)
 
-//  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb 76,164,109).
-function changeColor(cor){
-    console.log(document.getElementsByTagName("main")[0].style.backgroundColor = cor);
-}
-changeColor("green")
+// //  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb 76,164,109).
+// function changeColor(cor){
+//     console.log(document.getElementsByTagName("main")[0].style.backgroundColor = cor);
+// }
+// changeColor("green")
 
-//  Crie uma função que mude a cor do quadrado vermelho para branco.
-function colorChanging(corfundo){
-    console.log(document.getElementsByClassName("center-content")[0].style.backgroundColor = corfundo);
-}
-colorChanging("white")
+// //  Crie uma função que mude a cor do quadrado vermelho para branco.
+// function colorChanging(corfundo){
+//     console.log(document.getElementsByClassName("center-content")[0].style.backgroundColor = corfundo);
+// }
+// colorChanging("white")
 
-//  Crie uma função que corrija o texto da tag <h1>.
+// //  Crie uma função que corrija o texto da tag <h1>.
+// function corrigirTexto(correcao){
+//     document.getElementsByClassName("title")[0].innerText = correcao;
+// }
+// corrigirTexto("Exercício 5.1 - JavaScript");
+
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+  function alterarParaMaiuscula(){
+        let y = [];
+        y = (document.getElementsByTagName("p"));
+        for (let i = 0; i < y.length; i += 1) {
+          document.getElementsByTagName("p")[i].innerText = document.getElementsByTagName("p")[i].innerText.toUpperCase();
+          console.log (document.getElementsByTagName("p")[i].innerText);
+        }
+    }
+    alterarParaMaiuscula()
+
+
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+    // function exibir(){
+    //     let y = [];
+    //     y = (document.getElementsByTagName("p"));
+    //     for (let i = 0; i < y.length; i += 1) {
+    //       console.log (document.getElementsByTagName("p")[i].innerText);
+    //     }
+    // }
+    // exibir()
+
         
     </script>
   </body>
