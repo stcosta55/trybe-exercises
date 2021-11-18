@@ -28,3 +28,34 @@
 
 
 //aula 5.2 - exercicio 2 - criando elementos
+Crie um irmão para elementoOndeVoceEsta .
+let elementoPai = (document.getElementById("elementoOndeVoceEsta").parentNode);
+console.log(elementoPai);
+let quintoFilho = document.createElement('section');
+quintoFilho.innerText = "quinto Filho";
+elementoPai.appendChild(quintoFilho);
+
+// Crie um filho para elementoOndeVoceEsta .
+let ondeEstou = (document.getElementById("elementoOndeVoceEsta"));
+console.log(ondeEstou);
+let terceiroFilhoOndeEstou = document.createElement('section');
+terceiroFilhoOndeEstou.innerText = 'terceiro Filho Do Filho'
+ondeEstou.appendChild(terceiroFilhoOndeEstou);
+
+// Crie um filho para primeiroFilhoDoFilho .
+let elementoFilhoDoFilho = (document.getElementById("primeiroFilhoDoFilho"));
+console.log(elementoFilhoDoFilho.innerText);
+let primeiroFilhoDoFilhoDoFilho = document.createElement('section');
+primeiroFilhoDoFilhoDoFilho.innerText = 'primeiro Filho Do Filho Do Filho'
+elementoFilhoDoFilho.appendChild(primeiroFilhoDoFilhoDoFilho);
+primeiroFilhoDoFilhoDoFilho.id = 'primeiroFilhoDoFilhoDoFilho';
+console.log(primeiroFilhoDoFilhoDoFilho);
+
+
+
+// A partir desse filho criado, acesse terceiroFilho.
+let elemento = (document.getElementById('primeiroFilhoDoFilhoDoFilho'));
+console.log(elemento.parentElement.parentElement.nextElementSibling);
+
+
+
