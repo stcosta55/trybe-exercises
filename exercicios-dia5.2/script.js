@@ -28,34 +28,52 @@
 
 
 //aula 5.2 - exercicio 2 - criando elementos
-Crie um irmão para elementoOndeVoceEsta .
-let elementoPai = (document.getElementById("elementoOndeVoceEsta").parentNode);
-console.log(elementoPai);
-let quintoFilho = document.createElement('section');
-quintoFilho.innerText = "quinto Filho";
-elementoPai.appendChild(quintoFilho);
+//Crie um irmão para elementoOndeVoceEsta .
+// let elementoPai = (document.getElementById("elementoOndeVoceEsta").parentNode);
+// console.log(elementoPai);
+// let quintoFilho = document.createElement('section');
+// quintoFilho.innerText = "quinto Filho";
+// elementoPai.appendChild(quintoFilho);
 
-// Crie um filho para elementoOndeVoceEsta .
-let ondeEstou = (document.getElementById("elementoOndeVoceEsta"));
-console.log(ondeEstou);
-let terceiroFilhoOndeEstou = document.createElement('section');
-terceiroFilhoOndeEstou.innerText = 'terceiro Filho Do Filho'
-ondeEstou.appendChild(terceiroFilhoOndeEstou);
+// // Crie um filho para elementoOndeVoceEsta .
+// let ondeEstou = (document.getElementById("elementoOndeVoceEsta"));
+// console.log(ondeEstou);
+// let terceiroFilhoOndeEstou = document.createElement('section');
+// terceiroFilhoOndeEstou.innerText = 'terceiro Filho Do Filho'
+// ondeEstou.appendChild(terceiroFilhoOndeEstou);
 
-// Crie um filho para primeiroFilhoDoFilho .
-let elementoFilhoDoFilho = (document.getElementById("primeiroFilhoDoFilho"));
-console.log(elementoFilhoDoFilho.innerText);
-let primeiroFilhoDoFilhoDoFilho = document.createElement('section');
-primeiroFilhoDoFilhoDoFilho.innerText = 'primeiro Filho Do Filho Do Filho'
-elementoFilhoDoFilho.appendChild(primeiroFilhoDoFilhoDoFilho);
-primeiroFilhoDoFilhoDoFilho.id = 'primeiroFilhoDoFilhoDoFilho';
-console.log(primeiroFilhoDoFilhoDoFilho);
+// // Crie um filho para primeiroFilhoDoFilho .
+// let elementoFilhoDoFilho = (document.getElementById("primeiroFilhoDoFilho"));
+// console.log(elementoFilhoDoFilho.innerText);
+// let primeiroFilhoDoFilhoDoFilho = document.createElement('section');
+// primeiroFilhoDoFilhoDoFilho.innerText = 'primeiro Filho Do Filho Do Filho'
+// elementoFilhoDoFilho.appendChild(primeiroFilhoDoFilhoDoFilho);
+// primeiroFilhoDoFilhoDoFilho.id = 'primeiroFilhoDoFilhoDoFilho';
+// console.log(primeiroFilhoDoFilhoDoFilho);
 
-
-
-// A partir desse filho criado, acesse terceiroFilho.
-let elemento = (document.getElementById('primeiroFilhoDoFilhoDoFilho'));
-console.log(elemento.parentElement.parentElement.nextElementSibling);
+// // A partir desse filho criado, acesse terceiroFilho.
+// let elemento = (document.getElementById('primeiroFilhoDoFilhoDoFilho'));
+// console.log(elemento.parentElement.parentElement.nextElementSibling);
 
 
+//aula 5.2 - exercicio 3 - removendo elementos
+//Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 
+let paiElement = (document.getElementById('pai'));
+
+//remove primeiro filho de pai
+console.log("elemento pai: " +paiElement);
+paiElement.firstElementChild.remove();
+
+//remove terceiro filho
+console.log("elemento terceiro filho: " +paiElement.firstElementChild.nextElementSibling.innerHTML);
+paiElement.firstElementChild.nextElementSibling.remove();
+
+//remove último filho
+console.log("elemento ultimo filho: " +paiElement.lastElementChild.innerHTML);
+paiElement.lastElementChild.remove();
+
+
+//remove último filho segundoEUltimoFilhoDoFilho
+console.log("elemento segundoEUltimoFilhoDoFilho: " +paiElement.firstElementChild.lastElementChild.innerHTML);
+paiElement.firstElementChild.lastElementChild.remove();
