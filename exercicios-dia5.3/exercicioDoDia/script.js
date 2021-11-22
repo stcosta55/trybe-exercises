@@ -120,23 +120,29 @@ function changeColorFridays(){
 //Exercício 7:
 // Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
-
+let informationClassMytasks = document.getElementsByClassName('my-tasks');
 function createTasks(taskInformed){
-    let informationClassMytasks = document.getElementsByClassName('my-tasks');
-    let tasks = document.createElement('span');
+    let tasks = document.createElement('li');
     tasks.innerText = taskInformed;
     informationClassMytasks[0].appendChild(tasks);
 }
-
 createTasks('cozinhar');
+createColorTasks("blue");
 createTasks('limpar');
-
+createColorTasks("red");
+createTasks('tomar banho')
+createColorTasks("green");
 
 //Exercício 8:
 // Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
 // O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
-
+function createColorTasks(colorInformed){
+    let tasksColor = document.createElement('div');
+    tasksColor.style.backgroundColor = colorInformed;
+    tasksColor.className = 'tasks'
+    informationClassMytasks[0].appendChild(tasksColor);
+}
 
 //Exercício 9:
 // Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
